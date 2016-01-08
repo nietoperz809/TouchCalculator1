@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypad1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypad1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\appvertical1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\appvertical1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\stackview1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\stackview1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypadop1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypadop1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\inputview1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\inputview1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypadclear1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypadclear1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypadother1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypadother1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypadmembuffer1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypadmembuffer1.xml"
+    },
+    {
+        "merged": "C:\\android\\TouchCalculator1\\TouchCalculator\\build\\intermediates\\res\\merged\\debug\\drawable\\keypadresult1.xml",
+        "source": "C:\\android\\TouchCalculator1\\TouchCalculator\\src\\main\\res\\drawable\\keypadresult1.xml"
+    }
+]
