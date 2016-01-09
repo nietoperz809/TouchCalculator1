@@ -3,6 +3,8 @@
 
 package expr;
 
+import org.apache.commons.math3.special.Gamma;
+
 import java.math.BigInteger;
 
 import factorial.FactorialPoorMans;
@@ -148,7 +150,11 @@ public abstract class Expr
      * Unary operator: tangent
      */
     public static final int TAN = 113;
-    public static final int FACT = 114;
+    /**
+     * Gamma function
+     */
+    public static final int GAMMA = 114;
+    public static final int PRIMEFACTORS = 115;
 
     /**
      * Make a literal expression.
@@ -271,14 +277,12 @@ class UnaryExpr extends Expr
                 return Math.sqrt(arg);
             case TAN:
                 return Math.tan(arg);
-            case FACT:
-            {
-                if (arg > 200)
-                    throw new RuntimeException ("Input too big");
-                String s = FactorialPoorMans.Factorial((int) arg);
-                BigInteger bi = new BigInteger(s);
-                return bi.doubleValue();
-            }
+            case GAMMA:
+                return arg*Gamma.gamma(arg);
+
+            case PRIMEFACTORS:
+                return 0;
+
             default:
                 throw new RuntimeException("BUG: bad rator");
         }

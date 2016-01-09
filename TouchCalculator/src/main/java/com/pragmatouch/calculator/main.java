@@ -123,7 +123,7 @@ public class main extends Activity
         switch (keypadButton)
         {
             case FACT:
-                input += "fact(";
+                input += "gamma(";
                 break;
 
             case RECIPROC:
@@ -139,7 +139,7 @@ public class main extends Activity
                 break;
 
             case C:
-                if (input.isEmpty() == false)
+                if (!input.isEmpty())
                     input = input.substring(0, input.length() - 1);
                 break;
 
