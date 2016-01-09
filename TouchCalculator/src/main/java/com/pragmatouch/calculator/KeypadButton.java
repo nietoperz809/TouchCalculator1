@@ -30,6 +30,9 @@ public enum KeypadButton
 	, B_CLOSE(")",KeypadButtonCategory.OTHER)
 	, POW("^",KeypadButtonCategory.OPERATOR)
 	, CALCULATE("???",KeypadButtonCategory.RESULT)
+	, SQRT ("sqrt",KeypadButtonCategory.OTHER)
+    , SQUARE ("^2",KeypadButtonCategory.OTHER)
+	, FACT ("!",KeypadButtonCategory.OTHER)
 	, DUMMY("",KeypadButtonCategory.DUMMY);
 
 	CharSequence mText; // Display Text
