@@ -93,13 +93,12 @@ public class main extends Activity {
 	private void doCalc() 
 	{
 		Expr expr;
-		final double p = 1e17; // precision
-		try 
+		try
 		{
 			expr = Parser.parse(input);
-			double v = Math.round(expr.value()*p)/p; 
-			userInputText.setText("" + v);
-			input = "";
+			String res = ""+expr.value();
+			userInputText.setText(res);
+			//input = "";
 		} 
 		catch (Exception ex) 
 		{
