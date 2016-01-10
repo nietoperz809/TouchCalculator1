@@ -15,10 +15,10 @@ class BinaryExpr extends Expr
         this.rand1 = rand1;
     }
 
-    public double value()
+    public Double value()
     {
-        double arg0 = rand0.value();
-        double arg1 = rand1.value();
+        double arg0 = (double) rand0.value();
+        double arg1 = (double) rand1.value();
         switch (rator)
         {
             case ADD:
@@ -50,11 +50,11 @@ class BinaryExpr extends Expr
             case GT:
                 return arg0 > arg1 ? 1.0 : 0.0;
             case AND:
-                return (long) arg0 & (long) arg1;
+                return Double.valueOf((long) arg0 & (long) arg1);
             case OR:
-                return (long) arg0 | (long) arg1;
+                return Double.valueOf((long) arg0 | (long) arg1);
             case XOR:
-                return (long) arg0 ^ (long) arg1;
+                return Double.valueOf((long) arg0 ^ (long) arg1);
             default:
                 throw new RuntimeException("BUG: bad rator");
         }

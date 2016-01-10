@@ -32,7 +32,8 @@ public enum KeypadButton
 	, CALCULATE("???",KeypadButtonCategory.RESULT)
 	, SQRT ("sqrt",KeypadButtonCategory.OTHER)
     , SQUARE ("^2",KeypadButtonCategory.OTHER)
-	, FACT ("!",KeypadButtonCategory.OTHER)
+	, GAMMA("!",KeypadButtonCategory.OTHER)
+	, PRIME ("fact",KeypadButtonCategory.OTHER)
 	, DUMMY("",KeypadButtonCategory.DUMMY);
 
 	CharSequence mText; // Display Text

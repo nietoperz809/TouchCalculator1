@@ -233,10 +233,10 @@ public class Parser
 
     static private final String[] procs1 =
             {"abs", "acos", "asin", "atan", "ceil", "cos", "exp", "floor", "log", "round", "sin",
-                    "sqrt", "tan", "gamma"};
+                    "sqrt", "tan", "gamma", "fact"};
     static private final int[] rators1 =
             {Expr.ABS, Expr.ACOS, Expr.ASIN, Expr.ATAN, Expr.CEIL, Expr.COS, Expr.EXP, Expr.FLOOR,
-                    Expr.LOG, Expr.ROUND, Expr.SIN, Expr.SQRT, Expr.TAN, Expr.GAMMA};
+                    Expr.LOG, Expr.ROUND, Expr.SIN, Expr.SQRT, Expr.TAN, Expr.GAMMA, Expr.PRIMEFACTORS};
 
     static private final String[] procs2 = {"atan2", "max", "min"};
     static private final int[] rators2 = {Expr.ATAN2, Expr.MAX, Expr.MIN};

@@ -14,6 +14,9 @@ import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.List;
+
 import expr.Expr;
 import expr.Parser;
 
@@ -105,9 +108,17 @@ public class main extends Activity
         try
         {
             expr = Parser.parse(input);
-            String res = "" + expr.value();
+            Object obj = expr.value();
+            String res;
+            if (obj instanceof List)
+            {
+                res = Arrays.toString(((List)obj).toArray());
+            }
+            else
+            {
+                res = "" + (double)obj;
+            }
             userInputText.setText(res);
-            //input = "";
         }
         catch (Exception ex)
         {
@@ -122,7 +133,11 @@ public class main extends Activity
 
         switch (keypadButton)
         {
-            case FACT:
+            case PRIME:
+                input += "fact(";
+                break;
+
+            case GAMMA:
                 input += "gamma(";
                 break;
 

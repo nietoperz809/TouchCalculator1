@@ -3,12 +3,6 @@
 
 package expr;
 
-import org.apache.commons.math3.special.Gamma;
-
-import java.math.BigInteger;
-
-import factorial.FactorialPoorMans;
-
 /**
  * A mathematical expression, built out of literal numbers, variables,
  * arithmetic and relational operators, and elementary functions.  It
@@ -17,13 +11,12 @@ import factorial.FactorialPoorMans;
  */
 public abstract class Expr
 {
-
     /**
      * Calculate the expression's value.
      *
      * @return the value given the current variable values
      */
-    public abstract double value();
+    public abstract Object value();
 
     /**
      * Binary operator: addition
@@ -162,9 +155,9 @@ public abstract class Expr
      * @param v the constant value of the expression
      * @return an expression whose value is always v
      */
-    public static Expr makeLiteral(double v)
+    public static Expr makeLiteral(Object v)
     {
-        return new LiteralExpr(v);
+        return new LiteralExpr((Double) v);
     }
 
     /**
@@ -177,7 +170,10 @@ public abstract class Expr
     public static Expr makeApp1(int rator, Expr rand)
     {
         Expr app = new UnaryExpr(rator, rand);
-        return rand instanceof LiteralExpr ? new LiteralExpr(app.value()) : app;
+        if (app.value() instanceof Double)
+            return rand instanceof LiteralExpr ? new LiteralExpr((Double) app.value()) : app;
+        else
+            return app;
     }
 
     /**
@@ -191,8 +187,11 @@ public abstract class Expr
     public static Expr makeApp2(int rator, Expr rand0, Expr rand1)
     {
         Expr app = new BinaryExpr(rator, rand0, rand1);
-        return rand0 instanceof LiteralExpr && rand1 instanceof LiteralExpr ? new LiteralExpr(
-                app.value()) : app;
+        if (app.value() instanceof Double)
+            return rand0 instanceof LiteralExpr && rand1 instanceof LiteralExpr ? new LiteralExpr(
+                (Double) app.value()) : app;
+        else
+            return app;
     }
 
     /**
@@ -208,7 +207,7 @@ public abstract class Expr
     {
         Expr cond = new ConditionalExpr(test, consequent, alternative);
         if (test instanceof LiteralExpr)
-            return test.value() != 0 ? consequent : alternative;
+            return (Double)test.value() != 0 ? consequent : alternative;
         else
             return cond;
     }

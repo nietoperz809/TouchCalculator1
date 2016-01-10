@@ -1,7 +1,5 @@
 package com.pragmatouch.calculator;
 
-import com.pragmatouch.calculator.R.color;
-
 import android.widget.*;
 import android.content.*;
 import android.graphics.Color;
@@ -118,6 +116,6 @@ public class KeypadAdapter extends BaseAdapter
                     KeypadButton.RECIPROC, KeypadButton.ONE, KeypadButton.TWO, KeypadButton.THREE,
                     KeypadButton.MINUS, KeypadButton.DECIMAL_SEP, KeypadButton.SQRT,
                     KeypadButton.ZERO, KeypadButton.SQUARE, KeypadButton.PLUS,
-                    KeypadButton.CALCULATE, KeypadButton.FACT};
+                    KeypadButton.CALCULATE, KeypadButton.GAMMA, KeypadButton.PRIME};
 
 }

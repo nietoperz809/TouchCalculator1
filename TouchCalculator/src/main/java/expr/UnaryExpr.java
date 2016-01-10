@@ -2,6 +2,10 @@ package expr;
 
 import org.apache.commons.math3.special.Gamma;
 
+import java.util.List;
+
+import static org.apache.commons.math3.primes.Primes.primeFactors;
+
 /**
  * Created by Administrator on 1/10/2016.
  */
@@ -16,9 +20,9 @@ class UnaryExpr extends Expr
         this.rand = rand;
     }
 
-    public double value()
+    public Object value()
     {
-        double arg = rand.value();
+        Double arg = (Double) rand.value();
         switch (rator)
         {
             case ABS:
@@ -50,10 +54,10 @@ class UnaryExpr extends Expr
             case TAN:
                 return Math.tan(arg);
             case GAMMA:
-                return arg* Gamma.gamma(arg);
+                return arg * Gamma.gamma(arg);
 
             case PRIMEFACTORS:
-                return 0;
+            return primeFactors (arg.intValue());
 
             default:
                 throw new RuntimeException("BUG: bad rator");

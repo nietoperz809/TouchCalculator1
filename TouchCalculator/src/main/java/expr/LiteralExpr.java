@@ -5,14 +5,14 @@ package expr;
  */
 class LiteralExpr extends Expr
 {
-    double v;
+    Object v;
 
     LiteralExpr(double v)
     {
         this.v = v;
     }
 
-    public double value()
+    public Object value()
     {
         return v;
     }

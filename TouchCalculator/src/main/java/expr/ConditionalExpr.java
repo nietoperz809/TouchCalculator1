@@ -14,8 +14,8 @@ class ConditionalExpr extends Expr
         this.alternative = alternative;
     }
 
-    public double value()
+    public Object value()
     {
-        return test.value() != 0 ? consequent.value() : alternative.value();
+        return (Double)test.value() != 0 ? consequent.value() : alternative.value();
     }
 }
